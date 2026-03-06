@@ -1,6 +1,6 @@
 name: CI/CD Pipeline
 
-on: [push] # Trigger the pipeline on every push
+on: [push]
 
 jobs:
   test-and-build:
@@ -20,6 +20,16 @@ jobs:
 
       - name: Run QA Tests
         run: pytest test_app.py
+        
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build Docker Image
-        run: docker build -t my-qa-app .
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: Gerald-maker/cicdDemo
