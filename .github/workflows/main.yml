@@ -32,4 +32,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: gerald-maker/cicd-demo:latest
+          tags: gerry254/cicd-demo:latest
