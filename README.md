@@ -8,7 +8,7 @@ The goal of this project is to show how automated tests can be executed every ti
 
 The project contains:
 
-A simple Python application
+A simple Python application.
 
 Automated tests using pytest
 
