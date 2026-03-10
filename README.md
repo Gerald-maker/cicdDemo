@@ -24,5 +24,3 @@ cicdproject/
 ├── Dockerfile      # Container configuration
 ├── README.md       # Project documentation
 
-# QA Automation Demo
-This project demonstrates a full CI/CD pipeline using GitHub Actions and Docker
