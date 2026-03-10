@@ -1,8 +1,9 @@
 from app import add
 
 def test_add():
-    assert add(3, 3) == 7
+    assert add(3, 3) == 6
     assert add(-1, 1) == 0
     assert add(0, 0) == 0
     assert add(-5, -5) == -10
     assert add(2.5, 3.5) == 6.0
+    
